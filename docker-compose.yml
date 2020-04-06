@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+ chatbot:
+   build:
+      context: .
+      dockerfile: Dockerfile
+   container_name: demobot
+   environment:
+     - TZ=Europe/Rome
+   ports:
+     - 9091:9091
+     - 9229:9229
+   volumes:
+     - ../demo-bot/:/opt
+     - ../tmp/:/tmp
+   working_dir: /opt
+   tty: true
+   command: bash
+
+ db:
+   image: ppalma/tiscali
+   ports:
+     - 27017:27017
+   tty: true
+   container_name: db
