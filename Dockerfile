@@ -61,3 +61,6 @@ RUN git clone https://github.com/tesseract-ocr/tessconfigs
 WORKDIR /usr/local/share/tessdata/
 wget https://github.com/tesseract-ocr/tessdata/raw/master/eng.traineddata
 wget https://github.com/tesseract-ocr/tessdata/raw/master/ita.traineddata
+
+# sudo apt-get install tesseract-ocr-eng
+# RUN ln /dev/null /dev/raw1394
